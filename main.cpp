@@ -1,6 +1,24 @@
 #include <iostream>
 using namespace std;
+//xinrui Li
+//swap the two value. Pass by reference
 
+void mSwap(int& a, int& b)
+{
+  int temp = a;
+  a = b;
+  b = temp;
+}
+//rearrange the value from greatest to the least
+void rearrange(int &red,int &green, int &blue)
+{
+  if(red < green)// if the first smaller than second
+     mSwap(red,green);
+  if(red < blue)//if the first smaller than third
+     mSwap(red,blue);
+  if(green < blue)//if the second smaller than third
+     mSwap(green,blue);
+}     
 int main()
 {
   //DO NOT CHANGE WITHIN THIS AREA...
@@ -10,7 +28,7 @@ int main()
   //...END OF "DO NOT CHANGE" AREA
 
 
-
+   rearrange(red,green,blue);
 
 
   //DO NOT CHANGE WITHIN THIS AREA...
